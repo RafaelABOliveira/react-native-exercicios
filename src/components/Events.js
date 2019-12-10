@@ -4,7 +4,8 @@ import Padrao from '../estilo/Padrao';
 
 export default class Evento extends Component {
     state = {
-        texto: ''
+        texto: '' 
+        //if I use null, I dont need use onChangeText
     }
 
     alterarTexto = texto => {

@@ -8,8 +8,27 @@ import Contador from './components/Contador';
 import Plataformas from './components/Plataformas';
 import ValidarProps from './components/ValidarProps';
 import Evento from './components/Events';
+import { Avo } from './components/ComunicacaoDireta'; 
+//I can exclude keys if I use 'export default'
+import { TextoSincronizado } from './components/ComunicacaoIndireta';
+import ListaFlex from './components/ListaFlex';
+import Flex from './components/Flex';
 
 export default createDrawerNavigator({
+    Flex: {
+        screen: Flex
+    },
+    ListaFlex: {
+        screen: ListaFlex,
+        navigationOptions: { title: 'Lista (Flex Box)' }
+    },
+    TextoSincronizado: {
+        screen: TextoSincronizado,
+        navigationOptions: { title: 'Texto Sincronizado' }
+    },
+    Avo: {
+        screen: () => <Avo nome='João' sobrenome='Silva' />
+    },
     Evento: {
         screen: Evento
     },
